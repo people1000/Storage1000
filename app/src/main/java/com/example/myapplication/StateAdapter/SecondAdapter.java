@@ -1,6 +1,7 @@
 package com.example.myapplication.StateAdapter;
 
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,7 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.myapplication.Post;
+import com.example.myapplication.Database.DatabaseAdapter;
+import com.example.myapplication.Database.DatabaseHelper;
 import com.example.myapplication.R;
 
 import java.util.List;
@@ -35,7 +37,7 @@ public class SecondAdapter extends ArrayAdapter<Post_inSecondAdapter> {
 
         Post_inSecondAdapter post = posts.get(position);
 
-        imgView.setImageResource(post.getImg());
+//        imgView.setImageResource(post.getImg());
         nameView.setText(post.getName());
         dateView.setText(post.getDate());
 

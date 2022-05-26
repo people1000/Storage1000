@@ -1,15 +1,24 @@
 package com.example.myapplication.StateAdapter;
 
 public class Post_inSecondAdapter {
+    private long id;
     private String name; // название
     private String date;  // дата
-    private int img; // картинка
+    private String img; // картинка
 
-    public Post_inSecondAdapter(String name, String date , int img){
-
+    public Post_inSecondAdapter(long id, String name, String date ,String img){
+        this.id = id;
         this.name=name;
         this.date=date;
         this.img=img;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -28,11 +37,11 @@ public class Post_inSecondAdapter {
         this.date = date;
     }
 
-    public int getImg() {
+    public String getImg() {
         return this.img;
     }
 
-    public void setImg(int img) {
+    public void setImg(String img) {
         this.img = img;
     }
 }
